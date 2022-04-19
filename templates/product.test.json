@@ -1,0 +1,42 @@
+{
+  "sections": {
+    "main": {
+      "type": "test-product",
+      "settings": {
+        "tax_notice": "{{ product.metafields.my_fields.taxable.value }}",
+        "show_reviews": false
+      }
+    },
+    "16480089236637fde7": {
+      "type": "faq",
+      "blocks": {
+        "a9670f29-f342-49c5-94fe-f10bf6a64b0a": {
+          "type": "faq",
+          "settings": {
+            "question": "Your Question 1",
+            "answer": "<p>ENter the answer<\/p>"
+          }
+        },
+        "328addb7-9f51-4f6c-8a12-e09c8497fb95": {
+          "type": "faq",
+          "settings": {
+            "question": "Your Question",
+            "answer": "<p>The answer<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "a9670f29-f342-49c5-94fe-f10bf6a64b0a",
+        "328addb7-9f51-4f6c-8a12-e09c8497fb95"
+      ],
+      "settings": {
+        "faq_title": "FAQ Section",
+        "faq_description": "QUestions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16480089236637fde7"
+  ]
+}

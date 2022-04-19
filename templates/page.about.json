@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "1647325309fa0fc210": {
+      "type": "rich-text",
+      "blocks": {
+        "d361da54-f1e2-4fc6-9bdc-70be7672145a": {
+          "type": "heading",
+          "settings": {
+            "heading": "The Systemize Team",
+            "heading_size": "h1"
+          }
+        },
+        "1647325309d1adce9c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are here to provide you with everything you need to build your own PC and guide you in finding the best parts that suits your needs the best.<\/p><p>The Sytemize team was built to guide the people new  to the PC building scene because they lack the guidance. Our Team works hard to let you find what you need and bring you the best PC building experience. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d361da54-f1e2-4fc6-9bdc-70be7672145a",
+        "1647325309d1adce9c-1"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "1647325920cd33f829": {
+      "type": "rich-text",
+      "blocks": {
+        "1647325920d342d0a6-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Meet the Team",
+            "heading_size": "h1"
+          }
+        },
+        "91a16261-2ebf-4c7b-ba89-8422b58d0d2a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our team works hard so that you don't have to when you build your new PC.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1647325920d342d0a6-0",
+        "91a16261-2ebf-4c7b-ba89-8422b58d0d2a"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "16473258577a693bec": {
+      "type": "image-with-text",
+      "blocks": {
+        "1647325857b5e79c64-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "John Doe",
+            "heading_size": "h1"
+          }
+        },
+        "1647325857b5e79c64-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Founder.<\/p><p>The man behind the idea to launch Systemize<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "1647325857b5e79c64-0",
+        "1647325857b5e79c64-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Generic-Profile-Placeholder-v3.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1647326678372265cb": {
+      "type": "image-with-text",
+      "blocks": {
+        "164732667831c7513f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Jack",
+            "heading_size": "h1"
+          }
+        },
+        "164732667831c7513f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Lead Developer.<\/p><p>The man who brings the best online shopping experience to you.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "164732667831c7513f-0",
+        "164732667831c7513f-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Generic-Profile-Placeholder-v3.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "16474973874f2c06b5": {
+      "type": "image-with-text",
+      "blocks": {
+        "16474973867d363772-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tom",
+            "heading_size": "h1"
+          }
+        },
+        "16474973867d363772-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Hardware Manager<\/p><p>The man who works hard find the best parts that go on to our store shelves.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "16474973867d363772-0",
+        "16474973867d363772-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Generic-Profile-Placeholder-v3.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1647859735aa725a9d": {
+      "type": "custom-content-section",
+      "settings": {
+        "heading": "",
+        "description": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1647325309fa0fc210",
+    "1647325920cd33f829",
+    "16473258577a693bec",
+    "1647326678372265cb",
+    "16474973874f2c06b5",
+    "1647859735aa725a9d"
+  ]
+}

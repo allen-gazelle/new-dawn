@@ -1,0 +1,49 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div style="text-align: center">
+<h2>{{section.settings.heading}}</h2>
+<p>{{section.settings.description}}</p>
+
+{%for block in section.blocks %}
+
+	<img style="display: inline; margin: 20px" width="400" height="300" src="{{block.settings.image | img_url:'master'}}"/>
+
+{%endfor%}
+</div>
+
+{% schema %}
+{
+    "name": "image section",
+    "settings": [
+        {
+            "type": "text",
+            "label": "enter heading",
+            "id": "heading"
+        },
+        {
+            "type": "richtext",
+            "label": "description",
+            "id": "description"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "image block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "label": "your image",
+                    "id": "image"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"category": "Images",
+			"name": "New Image Section"
+		}
+	]
+}
+{% endschema %}
