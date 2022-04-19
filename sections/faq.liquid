@@ -28,45 +28,47 @@
 
 {% schema %}
 {
-	"name": "FAQ",
-	"tag": "section",
-	"class": "spaced-section",
-	"settings": [
-		{
-			"type": "text",
-			"id": "faq_title",
-			"default": "Frequently Asked Questions",
-			"label": "Title"
-		},
-		{
-			"type": "text",
-			"id": "faq_description",
-			"default": "Answers to few of the frequently asked questions",
-			"label": "Description"
-		}
-	],
-	"blocks": [
-		{
-			"name": "FAQ Item",
-			"type": "faq",
-			"settings": [
-				{
-					"type": "text",
-					"id": "question",
-					"label": "Question",
-					"default": "Your Question"
-				},
-				{
-					"type": "richtext",
-					"id": "answer",
-					"label": "Answer",
-					"default": "<p>The answer</p>"
-				}
-			]
-		}
-	],
-	"presets": [
-		{ "name": "FAQ Section" }
-	]
+  "name": "FAQ",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "faq_title",
+      "default": "Frequently Asked Questions",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "faq_description",
+      "default": "Answers to few of the frequently asked questions",
+      "label": "Description"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "FAQ Item",
+      "type": "faq",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Your Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>The answer</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section"
+    }
+  ]
 }
 {% endschema %}
