@@ -29,6 +29,17 @@
 
     {% render 'meta-tags' %}
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer="defer"></script>
+    <script src="{{ 'rivet-cart.min.js' | asset_url }}" defer="defer"></script>
+    <script type="text/javascript">
+      jQuery(function() {
+        CartJS.init({{ cart | json }}, {
+          "dataAPI": false,
+          "requestBodyClass": "loading"
+        });
+      });
+    </script>
+
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
