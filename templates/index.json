@@ -162,15 +162,6 @@
         "padding_bottom": 52
       }
     },
-    "164733021002c0c5d7": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"margin:0% 9%\">\n<script src=\"https:\/\/apps.elfsight.com\/p\/platform.js\" defer><\/script>\n<div class=\"elfsight-app-097ef8dd-538a-43ea-8979-0b88086b877e\"><\/div>\n<\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "video": {
       "type": "video",
       "settings": {
@@ -183,15 +174,6 @@
         "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
-      }
-    },
-    "16474233754bd9f0e5": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<div style=\"margin:0% 9%\">\n<script src=\"https:\/\/apps.elfsight.com\/p\/platform.js\" defer><\/script>\n<div class=\"elfsight-app-b2ae9295-0c0b-410b-800e-e0570819001e\"><\/div>\n<\/div>",
-        "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "multicolumn": {
