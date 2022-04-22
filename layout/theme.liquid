@@ -34,7 +34,7 @@
     <script type="text/javascript" src="{{ 'cart.min.js' | asset_url }}" defer="defer">
       jQuery(function() {
         CartJS.init({{ cart | json }}, {
-          "dataAPI": true,
+          "dataAPI": false,
           "debug":true,
           "requestBodyClass": "loading"
         });
