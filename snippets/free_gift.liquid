@@ -1,17 +1,27 @@
-<script type="text/javascript" src="{{ 'rivets-cart.js' | asset_url }}" defer="defer">
-    console.log("inside free gift");
+{% assign variant_id = '6978332459042' %}
 
-    $(document).on('cart.requestComplete', function(event, cart) {
-        console.log("in cart request complete event"); 
-        var variant_id = 6978332459042;
-        if(cart.total_price >= 5000)
-        {
-            CartJS.addItem(variant_id);
-        }
-        else
-        {
-            CartJS.removeItemById(variant_id);
-        }
-    });
+{% if cart.total_price >= 500000 %}
+    
+    <script type="text/javascript" src="{{ 'rivets-cart.js' | asset_url }}" defer="defer">
+        console.log("inside add free gift");
+    
+        $(document).on('cart.requestComplete', function(event, cart) {
+            console.log("in cart request complete event"); 
+            CartJS.addItem({{ variant_id }});
+        });
+    
+    </script>
 
-</script>
+    {% else %}
+    
+    <script type="text/javascript" src="{{ 'rivets-cart.js' | asset_url }}" defer="defer">
+        console.log("inside remove free gift");
+    
+        $(document).on('cart.requestComplete', function(event, cart) {
+            console.log("in cart request complete event"); 
+            CartJS.removeItemById({{ variant_id }});
+        });
+    
+    </script>
+    
+    {% endif %}
