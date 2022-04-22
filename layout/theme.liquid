@@ -31,7 +31,7 @@
 
     <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'cart.min.js' | asset_url }}" defer="defer"></script>
-    <script type="text/javascript" src="{{ 'cart.min.js' | asset_url }}" defer="defer">
+    <script type="text/javascript" src="{{ 'jquery.min.js' | asset_url }}" defer="defer">
       jQuery(function() {
         CartJS.init({{ cart | json }}, {
           "dataAPI": false,
