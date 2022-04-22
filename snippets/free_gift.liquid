@@ -2,7 +2,7 @@
 
 {% if cart.total_price >= 500000 %}
     
-    <script type="text/javascript" src="{{ 'rivets-cart.js' | asset_url }}" defer="defer">
+    <script type="text/javascript" src="{{ 'cart.min.js' | asset_url }}" defer="defer">
         console.log("inside add free gift");
     
         $(document).on('cart.requestComplete', function(event, cart) {
@@ -14,7 +14,7 @@
 
     {% else %}
     
-    <script type="text/javascript" src="{{ 'rivets-cart.js' | asset_url }}" defer="defer">
+    <script type="text/javascript" src="{{ 'cart.min.js' | asset_url }}" defer="defer">
         console.log("inside remove free gift");
     
         $(document).on('cart.requestComplete', function(event, cart) {
