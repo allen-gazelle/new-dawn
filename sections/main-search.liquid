@@ -108,10 +108,10 @@
               <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
             {%- endif -%}
 
-            <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-              <svg class="icon icon-search">
+            <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}" disabled>
+              {% comment %} <svg class="icon icon-search">
                 <use xlink:href="#icon-search">
-              </svg>
+              </svg> {% endcomment %}
             </button>
           </div>
         </form>
