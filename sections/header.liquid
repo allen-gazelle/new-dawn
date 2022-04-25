@@ -454,11 +454,11 @@
                     >
                     <label class="field__label" for="Search-In-Modal">{{ 'general.search.search' | t }}</label>
                     <input type="hidden" name="options[prefix]" value="last">
-                    {% comment %} <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}" disabled>
-                      <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+                    <button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}" disabled>
+                      {% comment %} <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
                         <use href="#icon-search">
-                      </svg>
-                    </button> {% endcomment %}
+                      </svg> {% endcomment %}
+                    </button>
                   </div>
 
                   {%- if settings.predictive_search_enabled -%}
