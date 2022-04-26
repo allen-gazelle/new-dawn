@@ -34,7 +34,7 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
-    this.getSearchResults(searchTerm);
+    this.checkLength(searchTerm);
   }
 
   onFormSubmit(event) {
@@ -49,11 +49,11 @@ class PredictiveSearch extends HTMLElement {
     if (this.getAttribute('results') === 'true') {
       this.open();
     } else {
-      this.getSearchResults(searchTerm);
+      this.checkLength(searchTerm);
     }
   }
 
-  checkLength() {
+  checkLength(searchTerm) {
     if (searchTerm.length > 2) {
       this.getSearchResults(searchTerm);
     }
