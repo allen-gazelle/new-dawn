@@ -53,6 +53,15 @@ class PredictiveSearch extends HTMLElement {
     }
   }
 
+  checkLength() {
+    if (searchTerm.length > 2) {
+      this.getSearchResults(searchTerm);
+    }
+    else {
+      this.getSearchResults('IthilOnnumIlla');
+    }
+  }
+
   onFocusOut() {
     setTimeout(() => {
       if (!this.contains(document.activeElement)) this.close();
@@ -128,28 +137,25 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
-    console.log(searchTerm);
-    if (searchTerm.length > 2) {
-      fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=6&${encodeURIComponent('resources[fields]')}=title,product_type,variants.title,variants.sku,body,vendor&section_id=predictive-search`)
-        .then((response) => {
-          if (!response.ok) {
-            var error = new Error(response.status);
-            this.close();
-            throw error;
-          }
-
-          return response.text();
-        })
-        .then((text) => {
-          const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
-          this.cachedResults[queryKey] = resultsMarkup;
-          this.renderSearchResults(resultsMarkup);
-        })
-        .catch((error) => {
+    fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=6&${encodeURIComponent('resources[fields]')}=title,product_type,variants.title,variants.sku,body,vendor&section_id=predictive-search`)
+      .then((response) => {
+        if (!response.ok) {
+          var error = new Error(response.status);
           this.close();
           throw error;
-        });
-    }
+        }
+
+        return response.text();
+      })
+      .then((text) => {
+        const resultsMarkup = new DOMParser().parseFromString(text, 'text/html').querySelector('#shopify-section-predictive-search').innerHTML;
+        this.cachedResults[queryKey] = resultsMarkup;
+        this.renderSearchResults(resultsMarkup);
+      })
+      .catch((error) => {
+        this.close();
+        throw error;
+      });
   }
 
   setLiveRegionLoadingState() {
