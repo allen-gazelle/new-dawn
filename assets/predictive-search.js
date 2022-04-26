@@ -128,6 +128,7 @@ class PredictiveSearch extends HTMLElement {
       return;
     }
 
+    console.log(searchTerm);
     if (searchTerm.length > 2) {
       fetch(`${routes.predictive_search_url}?q=${encodeURIComponent(searchTerm)}&${encodeURIComponent('resources[type]')}=product&${encodeURIComponent('resources[limit]')}=6&${encodeURIComponent('resources[fields]')}=title,product_type,variants.title,variants.sku,body,vendor&section_id=predictive-search`)
         .then((response) => {
