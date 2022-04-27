@@ -6,7 +6,7 @@
         {% assign product = all_products['fixkit-build-kits'] %}
         {% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
         {% assign variant_id = product.variants.first.id %}
-        <script>
+        <script type="text/javascript" src="{{ 'jquery.min.js' | asset_url }}" defer="defer">
         (function($) {
             var cartItems = {{ cart.items | json }},
             qtyInTheCart = 0,
