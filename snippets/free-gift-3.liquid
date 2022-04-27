@@ -7,11 +7,11 @@
         {% unless cart.item_count == 0 or product.empty? or product.variants.first.available == false %}
         {% assign variant_id = product.variants.first.id %}
         <script type="text/javascript" src="{{ 'jquery.min.js' | asset_url }}" defer="defer">
+        console.log(variant_id);
         (function($) {
             var cartItems = {{ cart.items | json }},
             qtyInTheCart = 0,
             cartUpdates = {};
-            console.log(variant_id);
             for (var i=0; i<cartItems.length; i++) {       
                 if ( cartItems[i].id === {{ variant_id }} ) {
                     qtyInTheCart = cartItems[i].quantity;
