@@ -68,11 +68,25 @@
                   lazy_load: lazy_load
                 %}
               </li>
-              <form method="post" action="/cart/add">
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
-                <input min="1" type="hidden" id="quantity" name="quantity" value="1"/>
-                <input type="submit" value="Add to cart" class="btn" />
-              </form>
+              <<button
+                          type="submit"
+                          name="add"
+                          class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                        {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                        >
+                            <span>
+                              {%- if product.selected_or_first_available_variant.available -%}
+                                {{ 'products.product.add_to_cart' | t }}
+                              {%- else -%}
+                                {{ 'products.product.sold_out' | t }}
+                              {%- endif -%}
+                            </span>
+                            <div class="loading-overlay__spinner hidden">
+                              <svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                              </svg>
+                            </div>
+                        </button>
             {%- endfor -%}
           </ul>
   
