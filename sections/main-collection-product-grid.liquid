@@ -67,21 +67,28 @@
                   show_rating: section.settings.show_rating,
                   lazy_load: lazy_load
                 %}
-              </li>
-              		<button  
- 						type="submit" 
- 						name="add" 
-						data-add-to-cart 
- 						class="js-go-cart-add-to-cart"
- 						{%- unless current_variant.available -%}disabled="disabled"{%- endunless -%}> 
-	 					<span data-add-to-cart-text> 
-	    				{%- if product.selected_or_first_available_variant.available -%} 
-	        				{{- 'products.product.add_to_cart' | t -}} 
-	    				{%- else -%} 
-	        				{{- 'products.product.sold_out' | t -}} 
-	    				{%- endif -%} 
-	 					</span>
- 					</button>  
+                
+
+				 	<input id="productQuantity" type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  					<input id="productId" min="1" type="number" id="quantity" name="quantity" value="1"/>
+                	<div class="cta" id="addit"><a class="getstarted-button">Add to Cart!</a></div>
+                
+                	<script>
+                    	$("#addit").click(function(){
+  							var productId = $("#productId").val();
+  							var productQuantity = $("#productQuantity").val();
+  							var data = {
+    							'product_id': productId,
+    							'quantity': productQuantity
+  							};
+
+  							$.post("/cart/add", data, showDone);
+ 						});
+ 
+ 					var showDone = function() {
+ 					}
+                </script>
+              </li> 
             <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
             {%- endfor -%}
           </ul>
