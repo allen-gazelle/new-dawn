@@ -272,6 +272,9 @@
     {%- endif -%}
     
     {{ 'gocart.js' | asset_url | script_tag }}
+    <script>
+  		var goCart = new GoCart();
+	</script>
     {%- section 'go-cart' -%}
   </body>
 </html>
