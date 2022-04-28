@@ -524,6 +524,7 @@
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+{%- include "go-cart-button" -%}
 
 {% javascript %}
   class StickyHeader extends HTMLElement {
